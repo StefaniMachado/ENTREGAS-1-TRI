@@ -1,0 +1,116 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    --borda: #000000;
+    --fundo-menu: #D7D3DB;
+    --fundo: radial-gradient(#000000,#000000,#000000,#ffffff);
+    border: 0 none;
+    background: var(--fundo);
+    background-attachment: fixed;
+}
+
+@keyframes piscadela {
+    50% {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes contagem {
+}
+
+@keyframes derrota {
+}
+
+@keyframes reset {
+}
+
+main {
+    height: 70vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > div {
+    width: 50%;
+    height: 50%;
+    border: solid var(--borda) 10px;
+    flex: none;
+}
+
+main > div:nth-child(1) {
+    background-color: blue;
+}    
+
+main > div:nth-child(2) {
+    background-color: red;
+}    
+
+main > div:nth-child(3) {
+    background-color: green;
+}    
+
+main > div:nth-child(4) {
+    background-color: yellow;
+}    
+
+main > div.animate {
+    animation: piscadela .3s ease-in-out;
+}
+
+body > div.contagem {
+    animation: contagem 3s ease-out;
+}
+
+div.start {
+    position:absolute;
+    clip-path: circle(70.0% at 50% 50%);
+    display: flex;
+    border: solid var(--borda) 30px;
+    width:calc(70vmin/2.5);
+    height: calc(70vmin/2.5);
+    background-color:var(--fundo-menu);
+    position: fixed;
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    padding: 5vmin;
+    background-color: #000000c5;
+    color:white;
+    font-size: 12vmin;
+   }
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.pontuacao {
+    font-size: 10vmin;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5vmin;
+    color: #000000c5;
+    clip-path: circle(25.0% at 0 0);
+}
