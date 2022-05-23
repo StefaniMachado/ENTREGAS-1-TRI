@@ -23,12 +23,6 @@ html, body {
 @keyframes contagem {
 }
 
-@keyframes derrota {
-}
-
-@keyframes reset {
-}
-
 main {
     height: 70vmin;
     width: 70vmin;
